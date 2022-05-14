@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 @Service
 public class ProductService {
 
-    List<Product> products = new ArrayList<>()
+    List<Product> products = new ArrayList<>();
 
     public String addProduct(Product product) {
 
@@ -30,7 +30,7 @@ public class ProductService {
     }
 
     public Product productById(Integer id) {
-        products.stream()
+        return products.stream()
                 .filter(product -> product.getId() == id)
                 .findAny()
                 .get();
